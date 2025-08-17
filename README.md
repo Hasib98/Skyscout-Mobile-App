@@ -1,7 +1,17 @@
 # 🌤️ Skyscout – React Native Weather App
 
+[Download APK](./assets/app-release.apk) 📲  
+
 Skyscout is a modern **React Native mobile application** that provides real-time weather data and 12-hour precipitation forecasts.  
 It is built with **TypeScript** and follows **industry-standard best practices** to ensure scalability, performance, and maintainability.
+
+---
+
+## 🖼️ Screenshots
+
+| Home Screen | Hourly Forecast | City Search | Current Weather |
+|------------|----------------|------------|----------------|
+| ![Screenshot 1](./assets/1.jpg) | ![Screenshot 2](./assets/2.jpg) | ![Screenshot 3](./assets/3.jpg) | ![Screenshot 4](./assets/4.jpg) |
 
 ---
 
@@ -52,53 +62,42 @@ It is built with **TypeScript** and follows **industry-standard best practices**
 ```sh
 git clone https://github.com/Hasib98/Skyscout-Mobile-App.git
 cd Skyscout-Mobile-App
-```
-
-### 2️⃣ Install dependencies
-```sh
+2️⃣ Install dependencies
+sh
+Copy
+Edit
 # Using npm
 npm install
 
 # OR using Yarn
 yarn install
-```
+3️⃣ Android Build Setup
+sh
+Copy
+Edit
+cd android
+./gradlew clean          # Optional: only if you face build issues
+cd ..
+npx react-native run-android
+After the build completes, you can start Metro Bundler separately if needed:
 
-### 3️⃣ Install iOS dependencies (macOS only)
-```sh
+sh
+Copy
+Edit
+npx react-native start
+4️⃣ iOS Setup (macOS only)
+sh
+Copy
+Edit
 cd ios
-bundle install       # one-time
+bundle install           # one-time
 bundle exec pod install
 cd ..
-```
-
-### 4️⃣ Run the project
-
-**Android**
-```sh
-npm run android
-# or
-yarn android
-```
-
-**iOS**
-```sh
-npm run ios
-# or
-yarn ios
-```
-
-**Metro Bundler** (if not started automatically)
-```sh
-npm start
-# or
-yarn start
-```
-
----
-
-## 📂 Project Structure
-
-```
+npx react-native run-ios
+📂 Project Structure
+bash
+Copy
+Edit
 Skyscout-Mobile-App/
 ├── android/            # Native Android project
 ├── ios/                # Native iOS project
@@ -109,73 +108,71 @@ Skyscout-Mobile-App/
 │   ├── services/       # API clients (Axios, Open-Meteo)
 │   ├── utils/          # Utility functions
 │   └── App.tsx         # Entry point
+├── assets/             # Images, APK, other static assets
 ├── package.json
 └── README.md
-```
+✅ Best Practices Followed
+TypeScript everywhere – for reliability and fewer runtime bugs.
 
----
+Separation of concerns – UI, logic, and API handling are clearly separated.
 
-## ✅ Best Practices Followed
+Reusable components – built atomic UI components to avoid duplication.
 
-- **TypeScript everywhere** – for reliability and fewer runtime bugs.
-- **Separation of concerns** – UI, logic, and API handling are clearly separated.
-- **Reusable components** – built atomic UI components to avoid duplication.
-- **Hooks-based architecture** – custom hooks (useLocation, useWeather) for clean state management.
-- **Error handling & fallback UI** – graceful handling of API errors and location permission denials.
-- **AsyncStorage caching** – optimized performance with local persistence.
-- **Theming & Dark Mode** – consistent user experience across devices.
-- **Clean Git history & commits** – meaningful commit messages and branch strategy.
+Hooks-based architecture – custom hooks (useLocation, useWeather) for clean state management.
 
----
+Error handling & fallback UI – graceful handling of API errors and location permission denials.
 
-## 🧑‍💻 Development Guidelines
+AsyncStorage caching – optimized performance with local persistence.
 
-- Run `npm run lint` before committing – ensures code quality.
-- Follow React Native community style guide.
-- PRs require code review before merge (if working in a team).
+Theming & Dark Mode – consistent user experience across devices.
 
----
+Clean Git history & commits – meaningful commit messages and branch strategy.
 
-## 🐛 Troubleshooting
+🧑‍💻 Development Guidelines
+Run npm run lint before committing – ensures code quality.
 
-**If Metro bundler fails**, restart with:
-```sh
+Follow React Native community style guide.
+
+PRs require code review before merge (if working in a team).
+
+🐛 Troubleshooting
+If Metro bundler fails, restart with:
+
+sh
+Copy
+Edit
 rm -rf node_modules
 npm install
 npm start --reset-cache
-```
+On Android emulator not detecting location, enable GPS in Emulator Settings.
 
-**On Android emulator not detecting location**, enable GPS in Emulator Settings.
+On iOS CocoaPods errors, try:
 
-**On iOS CocoaPods errors**, try:
-```sh
+sh
+Copy
+Edit
 cd ios && pod deintegrate && pod install
-```
+🚀 Roadmap / Future Improvements
+🌍 Multi-language support.
 
----
+🔔 Push notifications for severe weather alerts.
 
-## 🚀 Roadmap / Future Improvements
+📊 Charts for temperature & rainfall trends.
 
-- 🌍 Multi-language support.
-- 🔔 Push notifications for severe weather alerts.
-- 📊 Charts for temperature & rainfall trends.
-- 🧭 Integration with maps for regional forecasts.
-- 💾 Offline mode with last cached forecast.
+🧭 Integration with maps for regional forecasts.
 
----
+💾 Offline mode with last cached forecast.
 
-## 📜 License
-
+📜 License
 This project is licensed under the MIT License. Feel free to use and modify it.
 
----
+✨ Author
+👤 S. M. Hasib
 
-## ✨ Author
+🌐 Portfolio
 
-👤 **S. M. Hasib**
+💼 LinkedIn
 
-- 🌐 [Portfolio](http://smhasib.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/s-m-hasib-1627a6161/)
-- 🎨 [Behance](https://www.behance.net/sm_hasib)
+🎨 Behance
 
-🏆 **NASA Space Apps & Blockchain Olympiad Finalist**
+🏆 NASA Space Apps & Blockchain Olympiad Finalist
