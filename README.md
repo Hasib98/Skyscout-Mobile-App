@@ -1,6 +1,7 @@
 # 🌤️ Skyscout – React Native Weather App
 
 [Download APK](./assets/app-release.apk) 📲  
+[Demo Video Link](https://drive.google.com/file/d/1tLMJvpc0JAEicbseLP_SM7mWw1NW8i2o/view?usp=drivesdk) 🎥 
 
 Skyscout is a modern **React Native mobile application** that provides real-time weather data and 12-hour precipitation forecasts.  
 It is built with **TypeScript** and follows **industry-standard best practices** to ensure scalability, performance, and maintainability.
