@@ -9,7 +9,7 @@ It is built with **TypeScript** and follows **industry-standard best practices**
 
 ## 🖼️ Screenshots
 
-| Home Screen | Hourly Forecast | City Search | Current Weather |
+| Current Weather | City Search | Animated Loader | Current Weather |
 |------------|----------------|------------|----------------|
 | ![Screenshot 1](./assets/1.jpg) | ![Screenshot 2](./assets/2.jpg) | ![Screenshot 3](./assets/3.jpg) | ![Screenshot 4](./assets/4.jpg) |
 
