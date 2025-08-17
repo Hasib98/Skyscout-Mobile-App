@@ -26,10 +26,7 @@ It is built with **TypeScript** and follows **industry-standard best practices**
 - ⏳ **Hourly Forecast**  
   Displays precipitation probability and other conditions for the next 12 hours.
 
-- 🌗 **Dark/Light Mode Support**  
-  Adapts seamlessly to system theme for a better user experience.
-
-- ⚡ **Fast Refresh & Offline Storage**  
+- ⚡ **Offline Storage**  
   Uses `AsyncStorage` to cache location and user preferences for quick reloads.
 
 - 📱 **Cross-Platform**  
