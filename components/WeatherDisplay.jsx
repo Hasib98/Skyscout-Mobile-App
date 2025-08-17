@@ -145,8 +145,10 @@ const WeatherDisplay = ({ lat, lon }) => {
   const hourly = weatherData.hourly || {};
   const timeStr = hourly.time?.[index];
   const temp = hourly.temperature_2m?.[index] ?? 0; // fallback to 0 if missing
-  const precipitation = hourly.precipitation_probability?.[index] ?? 0;
+  const precipitation = hourly.precipitation_probability?.[index] ?? 0; 
   const weatherCode = hourly.weather_code?.[index] ?? 0;
+
+  console.log( "hourly",  weatherData);
 
   if (!timeStr) return null; // skip if no time
 
@@ -304,6 +306,24 @@ const WeatherDisplay = ({ lat, lon }) => {
                 snapToInterval={width * 0.2}
                 decelerationRate="fast"
               />
+              {/* <FlatList
+                data={Array.from({ length: hourlyLength })}
+                renderItem={({ item, index }) => {
+                  const timeStr = hourly.time[index];
+                  if (!timeStr) return null;
+
+                  const temp = hourly.temperature_2m[index] ?? 0;
+                  const precipitation = hourly.precipitation_probability[index] ?? 0;
+                  const weatherCode = hourly.weather_code[index] ?? 0;
+
+                  return (
+                    <Animated.View>
+                      <Text>{precipitation}%</Text>
+                    </Animated.View>
+                  );
+                }}
+                keyExtractor={(_, index) => index.toString()}
+              /> */}
             </Animated.View>
           </Animated.ScrollView>
         </SafeAreaView>

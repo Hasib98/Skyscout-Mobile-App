@@ -113,7 +113,7 @@ export const apiService = {
           latitude,
           longitude,
           current_weather: true,
-          hourly: 'precipitation_probability',
+          hourly: 'precipitation_probability,temperature_2m',
           forecast_days: 1,
           timezone: 'auto',
         }
